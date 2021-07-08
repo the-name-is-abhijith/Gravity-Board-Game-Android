@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlGameStart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.voiezstudio.gravity.activities.GameStartActivity">
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/ic_baseline_info_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="250dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/gravity_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ltName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/name"
+        android:textColorHint="#66FFFFFF"
+        app:errorTextColor="#b53737"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo">
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="true"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/amaranth"
+            android:gravity="start"
+            android:inputType="textCapWords"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textCursorDrawable="@null"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/ltButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/ltName">
+
+        <Button
+            android:id="@+id/btnCreate"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="129dp"
+            android:layout_height="43dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="105dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:fontFamily="@font/amiko"
+            android:text="Create Room"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnJoin"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="129dp"
+            android:layout_height="43dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="105dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:fontFamily="@font/amiko"
+            android:text="Join Room"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ltRoomCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:hint="@string/room_code"
+        android:textColorHint="#66FFFFFF"
+        app:errorTextColor="#b53737"
+        app:layout_constraintTop_toBottomOf="@+id/ltButtons">
+
+        <EditText
+            android:id="@+id/etRoomCode"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="true"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/amaranth"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textCursorDrawable="@null"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button3"
+        android:fontFamily="@font/acme"
+        android:text="@string/start_game"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressJoin"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
